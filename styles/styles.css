@@ -270,6 +270,8 @@ i:hover, i:focus {
 .section2 i {
     padding: 10px 30px 0;
     color: #e85b26;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 .section2 a:hover i, .section2 a:focus i {
@@ -467,7 +469,7 @@ input:focus {
         margin-top: 25px;
     }
 
-    .text h2 {
+    .text h2, .text3 h2 {
         margin-bottom: 10px;
     }
 
@@ -541,16 +543,110 @@ input:focus {
     .text3 {
         width: 100%;
         margin-left: 0;
+        margin: 30px 0;
     }
 
     .text3 h2, .text3 .extraInfo {
         text-align: center;
     }
+}
 
+@media (max-width: 705px) {
 
+    /* Header */
+
+    header {
+    background: url(./assets/image-1-m@2x.png);
+    background-size: cover;
+    height: 100vh;
+    }
+
+    /* Section 2 */
+
+    .section2 {
+        height: 85vh;
+        padding: 30px 0;
+    }
+
+    .section2 ul {
+        position: static;
+        width: 60%;
+        transform: none;
+        padding: 20px 10px;
+        margin: 0 auto;
+    }
+
+    .section2 li {
+        display: block;
+        margin: 30px 0;
+    }
+
+    /* Section 3 */
+
+    .desktopImg {
+        display: none;
+    }
+
+    .section3 li {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .section3 li:nth-child(2n) {
+    margin-right: 0;
+    }
+
+    /* Footer */
+
+    footer {
+        margin-top: 10px;
+        padding-top: 20px;
+    }
+
+    footer nav {
+        margin-bottom: 20px;
+    }
+
+    footer nav a {
+        margin: 10px 2px;
+        padding: 20px 6px;
+        font-weight: 500;
+    }
+
+    .contact, .email {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .email h2 {
+        margin: 50px 0 30px 0;
+    }
+
+    footer h2 {
+        font-size: 2.8rem;
+    }
+
+    button {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    input::placeholder {
+    text-align: center;
+    }
+
+    .copyright {
+        margin-top: 50px;
+    }
 
 }
 
+
+
+
+
+/* Min width 360 */
 
 
 
