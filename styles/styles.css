@@ -68,6 +68,7 @@ h1 {
 h2 {
     font-size: 4.2rem;
     margin-bottom: 30px;
+    font-weight: 400;
 }
 
 h3 {
@@ -97,6 +98,10 @@ nav {
     margin: 0 auto;
 }
 
+nav button {
+    display: none;
+}
+
 nav ul {
     list-style: none;
     padding: 30px 0;
@@ -120,7 +125,7 @@ nav a {
     color: #f4f4f4;
 }
 
-/* Header background & text*/
+/* Header background & icons*/
 
 header {
     background: url(./assets/image-1@2x.png);
@@ -346,7 +351,7 @@ form {
 
 input {
     color: #f4f4f4;
-    padding: 10px;
+    padding: 10px 20px;
     background: #f4f4f4;
     border: 3px #f4f4f4 solid; 
     display: block;
@@ -355,13 +360,15 @@ input {
 
 input::placeholder {
     color: #1f2022;
+    opacity: 1;
 }
 
 input[type="email"] {
-    width: 70%;
+    width: 72%;
 }
 
-button {
+.submit {
+    font-family: 'Nova Flat', cursive;
     display: block;
     float: left;
     margin: 0;
@@ -387,6 +394,8 @@ input:focus {
     text-align: center;
     padding: 10px 0;
     margin-top: 100px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
 }
 
 .copyright a {
@@ -406,7 +415,7 @@ input:focus {
 
     header {
         height: 60vh;
-}
+    }
 
     /* Section 1 */
 
@@ -445,7 +454,9 @@ input:focus {
 
 }
 
-@media (max-width: 1082px) {
+@media (max-width: 1080px) {
+
+    /* Section 1 */
 
     .text {
         margin-top: 40px;
@@ -462,6 +473,10 @@ input:focus {
 }
 
 @media (max-width: 980px) {
+
+    h1 {
+        letter-spacing: 0;
+    }
 
     /* Section 1 */
 
@@ -509,7 +524,7 @@ input:focus {
 
 }
 
-@media (max-width: 980px) {
+@media (max-width: 890px) {
 
     /* Section 1 */
 
@@ -536,7 +551,7 @@ input:focus {
         width: 100%;
     }
 
-     .imgBlog3 img {
+    .imgBlog3 img {
         margin: 0 auto;
     }
 
@@ -549,28 +564,18 @@ input:focus {
     .text3 h2, .text3 .extraInfo {
         text-align: center;
     }
-}
-
-@media (max-width: 705px) {
-
-    /* Header */
-
-    header {
-    background: url(./assets/image-1-m@2x.png);
-    background-size: cover;
-    height: 100vh;
-    }
 
     /* Section 2 */
 
     .section2 {
-        height: 85vh;
+        height: 65vh;
         padding: 30px 0;
+        min-height: 600px;
     }
 
     .section2 ul {
         position: static;
-        width: 60%;
+        width: 65%;
         transform: none;
         padding: 20px 10px;
         margin: 0 auto;
@@ -579,6 +584,90 @@ input:focus {
     .section2 li {
         display: block;
         margin: 30px 0;
+    }
+
+}
+
+@media (max-width: 670px) {
+
+    /* Header */
+
+    h1 {
+        font-size: 10rem;
+        right: 5%;
+        top: 50%
+    }
+
+    .formatH1 {
+        margin-top: 50px;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    header {
+        background: url(./assets/image-1-m@2x.png);
+        background-size: cover;
+        height: 100vh;
+    }
+
+    /* Navigation menu */
+
+    .mobileMenu {
+        text-align: right;
+    }
+
+    .mobileMenu button {
+        color: #186684;
+        display: block;
+        border: none;
+        background: none;
+        padding: 5px 55px;
+    }
+
+    .mobileMenu li {
+        position: relative;
+    }
+
+    .mobileMenu li a {
+        display: inline-block;
+        border: solid 1px #f4f4f4;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .mobileMenu button:hover, .mobileMenu button:focus-within {
+        background-color: #1f2022;
+    }
+
+    ul.mobileSubMenu {
+        background: #e3e4eA;
+        color: #186684;
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobileMenu li:hover ul.mobileSubMenu, .mobileMenu li:focus-within ul.mobileSubMenu {
+        display: block;
+    }
+
+    .mobileSubMenu li {
+        display: block;
+    }
+
+    ul.mobileSubMenu li a {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav i {
+        font-size: 3.8rem;
     }
 
     /* Section 3 */
@@ -627,7 +716,7 @@ input:focus {
         font-size: 2.8rem;
     }
 
-    button {
+    .submit {
         margin-top: 15px;
         width: 100%;
     }
@@ -642,11 +731,44 @@ input:focus {
 
 }
 
+@media (max-width: 500px) {
 
+    h1 {
+        font-size: 9rem;
+    }
+
+    .formatH1 {
+        margin-top: 45px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    h1 {
+        font-size: 8rem;
+        top: 35%;
+    }
+
+    .formatH1 {
+        margin-top: 35px;
+    }
+
+}
+
+@media (max-width: 390px) {
+
+    h1 {
+        font-size: 7.4rem;
+        top: 48%;
+    }
+
+    .textBlog1 h2 {
+        margin: 0 -11px 10px;
+    }
+
+}
 
 
 
 /* Min width 360 */
-
-
-
